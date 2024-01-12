@@ -11,5 +11,10 @@ stampa un messaggio appropriato sull'esito del controllo.
 
 - Chiedo la mail all'utente
 - Controllo se la mail inserita esista nella lista array
-- Stampa risultato
+
+SE la mail è in lista:
+- Stampa risultato positivo
+
+ALTRIMENTI
+- Stampa risultato negativo
 

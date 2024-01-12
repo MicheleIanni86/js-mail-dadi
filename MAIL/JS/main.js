@@ -1,1 +1,1 @@
-const resultElement =; 
+const resultElement = document.getElementById('result'); 
