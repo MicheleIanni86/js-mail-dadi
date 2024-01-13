@@ -10,20 +10,27 @@ startButtonElement.addEventListener('click', function () {
     containerStartButton.classList.add('d-none');
     document.getElementById('resultUser').classList.add('d-none');
     document.getElementById('resultPc').classList.add('d-none');
+    document.getElementById('containerUser').classList.add('d-none');
+    document.getElementById('containerPC').classList.add('d-none');
 });
 
 // Bottone per Gettare Dadi
 plauButtonElement.addEventListener('click', function () {
 
+    document.getElementById('resultUser').classList.remove('d-none');
+    document.getElementById('resultPc').classList.remove('d-none');
+    document.getElementById('containerUser').classList.remove('d-none');
+    document.getElementById('containerPC').classList.remove('d-none');
+
     // - Genero un numero rondom da 1 a 6 per l'user.
     //     - Salvo in una variabile il numero 
     let userNumber = Math.floor(Math.random() * 6 + 1);
-    resultUserElement.innerHTML = (`Il Giocatore ha scelto il n° ${userNumber}`);
+    resultUserElement.innerHTML = (`Al Giocatore è uscito il n° <div class="styleNumber">${userNumber}</div>`);
 
     // - Genero un numero random da 1 a 6 per il computer.
     //     - Salvo in una variabile il numero 
     let pcNumber = Math.floor(Math.random() * 6 + 1);
-    resultPcElement.innerHTML = (`Il PC ha scelto il n° ${pcNumber}`);
+    resultPcElement.innerHTML = (`Al PC è uscito il n° <div class="styleNumber">${pcNumber}</div>`);
 
 
     //  SE il numero generato per l'user è minore del numero del computer
@@ -40,7 +47,5 @@ plauButtonElement.addEventListener('click', function () {
         winners.innerHTML = (`Pareggio`);
     }
 
-    document.getElementById('resultUser').classList.remove('d-none');
-    document.getElementById('resultPc').classList.remove('d-none');
 
 });

@@ -16,35 +16,39 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container text-center" id="titleGame">
+    <div class="container text-center mt-5 mb-5" id="titleGame">
         <h1>GIOCO DEI DADI</h1>
     </div>
 
-<div class="container bg-warning text-white text-center p-2" id="containerStartButton">
-    <button type="button" class="btn btn-secondary" id="startButton">Clicca per giocare!</button>
+<div class="container bg-warning text-white text-center" id="containerStartButton">
+    <button type="button" class="btn" id="startButton">Clicca per giocare!</button>
 </div>
 
 
-<div class="container bg-primary text-white text-center p-2 d-none" id="screenGame">
-    <div class="row g-2">
-      <div class="col-6">
-        <div class="p-3" id="resultUser"></div>
-      </div>
-      <div class="col-6">
-        <div class="p-3" id="resultPc"></div>
-      </div>
+
+<div class="container bg-warning text-white text-center d-none" id="screenGame">
+    <div class="row g-2 gap-5" id="ContainerAll">
+        <div class="col-6" id="containerUser">
+            <div class="p-3" id="resultUser"></div>
+        </div>
+        <div class="col-6" id="containerPC">
+            <div class="p-3" id="resultPc"></div>
+        </div>
     </div>
-    <div class="row g-2">
-        <div class="col-12">
-            <button type="button" class="btn btn-secondary" id="playButton">Gettate i Dadi!</button>
+    <div class="row g-2" >
+        <div class="col-12 containerButton">
+            <button type="button" class="btn" id="playButton">Gettate i Dadi!</button>
         </div>
         <div class="col-12" id="winners">
-            <!-- <div id="winners" class="bg-secondary mt-3"></div> -->
+            <div id="winners" class="bg-secondary mt-3"></div>
         </div>
-
     </div>
+</div>
 
-  </div>
+
+
+
+
 
 
 
