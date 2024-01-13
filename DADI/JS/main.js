@@ -1,31 +1,46 @@
-// - Genero un numero rondom da 1 a 6 per l'user.
-//     - Salvo in una variabile il numero 
-// - Genero un numero random da 1 a 6 per il computer.
-//     - Salvo in una variabile il numero 
+const resultUserElement = document.getElementById('resultUser');
+const resultPcElement = document.getElementById('resultPc');
+const winners = document.getElementById('winners');
+const startButtonElement = document.getElementById('startButton');
+const plauButtonElement = document.getElementById('playButton');
+const screenGameElement = document.getElementById('screenGame');
+// Bottone per avviare Schermata Gioco
+startButtonElement.addEventListener('click', function () {
+    screenGameElement.classList.remove('d-none');
+    containerStartButton.classList.add('d-none');
+    document.getElementById('resultUser').classList.add('d-none');
+    document.getElementById('resultPc').classList.add('d-none');
+});
 
-//  SE il numero generato per l'user è minore del numero del computer
-//  - Stampo Lose
+// Bottone per Gettare Dadi
+plauButtonElement.addEventListener('click', function () {
 
-// ALTRIMENTI SE il numero generato per l'user è maggiore del numero del computer
-//  - Stampo Win
+    // - Genero un numero rondom da 1 a 6 per l'user.
+    //     - Salvo in una variabile il numero 
+    let userNumber = Math.floor(Math.random() * 6 + 1);
+    resultUserElement.innerHTML = (`Il Giocatore ha scelto il n° ${userNumber}`);
 
-// ALTRIMENTI
-// - Stampo Drow
-
-
-let userNumber = Math.floor(Math.random() * 6 + 1);
-console.log(userNumber);
-
-
-
-let pcNumber = Math.floor(Math.random() * 6 + 1);
-console.log(pcNumber);
+    // - Genero un numero random da 1 a 6 per il computer.
+    //     - Salvo in una variabile il numero 
+    let pcNumber = Math.floor(Math.random() * 6 + 1);
+    resultPcElement.innerHTML = (`Il PC ha scelto il n° ${pcNumber}`);
 
 
-if (userNumber < pcNumber) {
-    console.log("Vince il PC");
-} else if (userNumber > pcNumber) {
-    console.log("Vince il Giocatore");
-} else if (userNumber == pcNumber) {
-    console.log("Pareggio");
-}
+    //  SE il numero generato per l'user è minore del numero del computer
+    if (userNumber < pcNumber) {
+        //  - Stampo Lose
+        winners.innerHTML = (`Vince il PC`);
+        // ALTRIMENTI SE il numero generato per l'user è maggiore del numero del computer
+    } else if (userNumber > pcNumber) {
+        //  - Stampo Win
+        winners.innerHTML = (`Vince il Giocatore`);
+        // ALTRIMENTI
+    } else if (userNumber == pcNumber) {
+        // - Stampo Drow
+        winners.innerHTML = (`Pareggio`);
+    }
+
+    document.getElementById('resultUser').classList.remove('d-none');
+    document.getElementById('resultPc').classList.remove('d-none');
+
+});

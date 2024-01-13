@@ -16,10 +16,44 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container text-center" id="titleGame">
+        <h1>GIOCO DEI DADI</h1>
+    </div>
 
-<div class="container">
-    <h1 id=""></h1>
+<div class="container bg-warning text-white text-center p-2" id="containerStartButton">
+    <button type="button" class="btn btn-secondary" id="startButton">Clicca per giocare!</button>
 </div>
+
+
+<div class="container bg-primary text-white text-center p-2 d-none" id="screenGame">
+    <div class="row g-2">
+      <div class="col-6">
+        <div class="p-3" id="resultUser"></div>
+      </div>
+      <div class="col-6">
+        <div class="p-3" id="resultPc"></div>
+      </div>
+    </div>
+    <div class="row g-2">
+        <div class="col-12">
+            <button type="button" class="btn btn-secondary" id="playButton">Gettate i Dadi!</button>
+        </div>
+        <div class="col-12" id="winners">
+            <!-- <div id="winners" class="bg-secondary mt-3"></div> -->
+        </div>
+
+    </div>
+
+  </div>
+
+
+
+<!-- <div class="container bg-primary text-white text-center p-2 d-none" id="screenGame">
+    <div id="resultUser" class=""></div>
+    <div id="resultPc" class="my-3"></div>
+    <button type="button" class="btn btn-secondary" id="playButton">Gettate i Dadi!</button>
+    <div id="winners" class="bg-secondary mt-3"></div>
+</div> -->
 
 
 
