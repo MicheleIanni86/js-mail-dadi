@@ -1,3 +1,19 @@
 body {
     background-color: black;
 }
+
+.colorOk {
+    color: green;
+    font-weight: bold;
+}
+
+.colorKo {
+    color: red;
+    font-weight: bold;
+}
+
+.boxInfo {
+    background-color: darkred;
+    border-radius: 25px;
+    bac
+}

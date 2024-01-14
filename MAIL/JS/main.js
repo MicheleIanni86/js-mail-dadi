@@ -19,12 +19,12 @@ buttonSendElement.addEventListener('click', function () {
             break;
 
         } else if (emailLogin.value == emailOk[i]) {
-            result.innerHTML = "Accesso Consentito";
+            result.innerHTML = `<div class="colorOk"> Accesso Consentito </div>`;
 
             break;
 
         } else {
-            result.innerHTML = "Accesso Negato";
+            result.innerHTML = `<div class="colorKo"> Accesso Negato </div>`;
 
         }
 
