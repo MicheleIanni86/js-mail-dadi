@@ -17,11 +17,16 @@
 </head>
 <body>
 
-<div class="container text-center">
-    <h1>Accedi alla Mail</h1>
-    <h2  id="result"></h2>
-    
+<div class="container text-center my-5 boxInfo">
+    <h1 class="mb-4 text-white">Accedi con la tua E-Mail</h1>
+    <form>
+        <div class="mb-1 d-inline-flex gap-3">
+            <input type="email" class="form-control" id="emailLogin" placeholder="Inserisci qui la tua Email" value="">
+            <button href="location.reload" class="btn btn-warning border border-warning" type="button" id="buttonSend">Invia</button>
+        </div>
+    </form>    
 </div>
+<h2 class="text-center text-white" id="result"></h2>
 
 
 
