@@ -12,6 +12,7 @@ startButtonElement.addEventListener('click', function () {
     document.getElementById('resultPc').classList.add('d-none');
     document.getElementById('containerUser').classList.add('d-none');
     document.getElementById('containerPC').classList.add('d-none');
+    document.getElementById('winners').classList.add('d-none');
 });
 
 // Bottone per Gettare Dadi
@@ -21,6 +22,7 @@ plauButtonElement.addEventListener('click', function () {
     document.getElementById('resultPc').classList.remove('d-none');
     document.getElementById('containerUser').classList.remove('d-none');
     document.getElementById('containerPC').classList.remove('d-none');
+    document.getElementById('winners').classList.remove('d-none');
 
     // - Genero un numero rondom da 1 a 6 per l'user.
     //     - Salvo in una variabile il numero 
